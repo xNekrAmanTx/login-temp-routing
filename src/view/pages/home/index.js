@@ -1,14 +1,12 @@
-import React from 'react';
-import Header from '../../../components/header'
+import React, {useState} from 'react';
 
-const Home = () => {
-    const who = localStorage.getItem('username') || 'guest';
+const Home = ({username}) => {
+    //const [who,setWho] = localStorage.getItem('username') || 'guest');
     return (
         <>
-            <Header />
             <main>
                 <h1>Home Page</h1>
-                <div className='welcome'> {`Welcome, ${who}`} </div>
+                <div className='welcome'> {`Welcome, ${username || 'guest'}`} </div>
             </main>
         </>
     )

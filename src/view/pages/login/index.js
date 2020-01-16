@@ -7,7 +7,7 @@ import LockOutlinedIcon from '@material-ui/icons/LockOutlined';
 import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
-import Header from '../../../components/header'
+
 
 const useStyles = makeStyles(theme => ({
     paper: {
@@ -40,14 +40,12 @@ const LogIn = ({ history }) => {
 
     const handleSubmit = () => {
         localStorage.setItem('username', username);
-        history.push('/')
+        history.push('/home')
     }
 
 
 
     return (
-        <>
-            <Header/>
             <Container component="main" maxWidth="xs">
                 <CssBaseline />
                 <div className={classes.paper}>
@@ -56,7 +54,7 @@ const LogIn = ({ history }) => {
                     </Avatar>
                     <Typography component="h1" variant="h5">
                         Log In
-        </Typography>
+                    </Typography>
                     <form className={classes.form} noValidate>
                         <TextField
                             variant="outlined"
@@ -94,7 +92,6 @@ const LogIn = ({ history }) => {
                     </form>
                 </div>
             </Container>
-        </>
     );
 }
 
